@@ -1,0 +1,17 @@
+<div id="myDiv"
+  infiniteScroll
+  [infiniteScrollThrottle]="150"
+  (scrolled)="onScroll()"
+
+>
+  <div *ngFor="let item of flightPage">
+    <img src="https://picsum.photos/200/300" alt="">
+    <br>
+    {{item.flight_number}}
+    <br>
+    {{item.mission_name}}
+  </div>
+
+</div>
+<ngx-spinner></ngx-spinner>
+
